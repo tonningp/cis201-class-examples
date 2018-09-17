@@ -11,6 +11,24 @@
 - To document the responsibilities of functions and their callers with preconditions
 - To learn the fundamental principles of testing and debugging
 
+# Chapter Contents
+
+[4.01-functions-as-black-boxes]( 4.01-functions-as-black-boxes)
+[4.02-implementing-functions]( 4.02-implementing-functions)
+[4.03-function-comments]( 4.03-function-comments)
+[4.04-return-values]( 4.04-return-values)
+[4.05-parameters]( 4.05-parameters)
+[4.06-side-effects]( 4.06-side-effects)
+[4.07-procedures]( 4.07-procedures)
+[4.08-reference-parameters]( 4.08-reference-parameters)
+[4.09-variable-scope-and-global-variables]( 4.09-variable-scope-and-global-variables)
+[4.10-stepwise-refinement]( 4.10-stepwise-refinement)
+[4.11-case-study-from-pseudocode-to-code]( 4.11-case-study-from-pseudocode-to-code)
+[4.12-walkthroughs]( 4.12-walkthroughs)
+[4.13-preconditions]( 4.13-preconditions)
+[4.14-unit-testing]( 4.14-unit-testing)
+[4.15-the-debugger]( 4.15-the-debugger)
+
 # Summary
 1.	A function receives input parameters and computes a result that depends on those inputs.
 2.	Parameter values are supplied in the function call. The return value is the result that the function computes.
