@@ -6,11 +6,11 @@
 
 # Chapter Contents
 
-[6.01-using-vectors-to-collect-data-items ](6.01-using-vectors-to-collect-data-items
-[6.02-working-with-vectors ](6.02-working-with-vectors)
-[6.03-vector-parameters-and-return-values ](6.03-vector-parameters-and-return-values)
-[6.04-removing-and-inserting-vector-elements]( 6.04-removing-and-inserting-vector-elements)
-[6.05-arrays ](6.05-arrays)
+- [6.01-using-vectors-to-collect-data-items ](6.01-using-vectors-to-collect-data-items)
+- [6.02-working-with-vectors ](6.02-working-with-vectors)
+- [6.03-vector-parameters-and-return-values ](6.03-vector-parameters-and-return-values)
+- [6.04-removing-and-inserting-vector-elements]( 6.04-removing-and-inserting-vector-elements)
+- [6.05-arrays ](6.05-arrays)
 
 # Summary
 
