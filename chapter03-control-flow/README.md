@@ -12,14 +12,14 @@
 
 **Chapter Contents**
 
-   * [3.1-the-if-statement](./3.1-the-if-statement)
-   * [3.2-relational-operators](./3.2-relational-operators)
-   * [3.3-multiple-alternatives](./3.3-multiple-alternatives)
-   * [3.4-nested-branches](./3.4-nested-branches)
-   * [3.5-boolean-operations](./3.5-boolean-operations)
-   * [3.6-the-while-loop](./3.6-the-while-loop)
-   * [3.7-the-for-loop](./3.7-the-for-loop)
-   * [3.8-the-do-loop](./3.8-the-do-loop)
-   * [3.9-nested-loops](./3.9-nested-loops)
+   * [3.01-the-if-statement](./3.01-the-if-statement)
+   * [3.02-relational-operators](./3.02-relational-operators)
+   * [3.03-multiple-alternatives](./3.03-multiple-alternatives)
+   * [3.04-nested-branches](./3.04-nested-branches)
+   * [3.05-boolean-operations](./3.05-boolean-operations)
+   * [3.06-the-while-loop](./3.06-the-while-loop)
+   * [3.07-the-for-loop](./3.07-the-for-loop)
+   * [3.08-the-do-loop](./3.08-the-do-loop)
+   * [3.09-nested-loops](./3.09-nested-loops)
    * [3.10-processing-inputs](./3.10-processing-inputs)
    * [3.11-simulations](./3.11-simulations)
