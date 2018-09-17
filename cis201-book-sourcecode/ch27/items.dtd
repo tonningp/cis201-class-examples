@@ -1,0 +1,6 @@
+<!ELEMENT items (item)*>
+<!ELEMENT item (product, quantity)>
+<!ELEMENT product (description, price)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
