@@ -3,12 +3,14 @@ REVIEW EXERCISES
 Exercise R3.1. Find the errors in the following if statements.
 
 a. 
+
 ```cpp
 // comment the following out and add the correct code below
 if quarters > 0 then cout << quarters << " quarters"; 
 
 ```
 b. 
+
 ```cpp
 if (1 + x > pow(x, sqrt(2)) 
    y = y + x; 
