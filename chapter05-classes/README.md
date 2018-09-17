@@ -6,16 +6,16 @@
 - To understand object construction 
 - To learn how to distribute a program over multiple source file
 # Chapter Contents
-[05.01-discovering-classes ](05.01-discovering-classes
-[05.02-interfaces ](05.02-interfaces)
-[05.03-encapsulation ](05.03-encapsulation)
-[05.04-member-functions ](05.04-member-functions)
-[05.05-default-constructors ](05.05-default-constructors)
-[05.06-constructors-with-parameters ](05.06-constructors-with-parameters)
-[05.07-accessing-data-fields ](05.07-accessing-data-fields)
-[05.08-comparing-member-functions-with-nonmember-function
+- [05.01-discovering-classes ](05.01-discovering-classes)
+- [05.02-interfaces ](05.02-interfaces)
+- [05.03-encapsulation ](05.03-encapsulation)
+- [05.04-member-functions ](05.04-member-functions)
+- [05.05-default-constructors ](05.05-default-constructors)
+- [05.06-constructors-with-parameters ](05.06-constructors-with-parameters)
+- [05.07-accessing-data-fields ](05.07-accessing-data-fields)
+- [05.08-comparing-member-functions-with-nonmember-function
 ](05.08-comparing-member-functions-with-nonmember-function)
-[05.09-separate-compilation ](05.09-separate-compilation)
+- [05.09-separate-compilation ](05.09-separate-compilation)
 
 # Summary
 1. A class represents a concept. Instead of groups of related variables, try designing a class for the underlying concept.
