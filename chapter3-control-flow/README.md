@@ -8,7 +8,7 @@
 * To learn how to process text input
 * To implement approximations and simulations
 *Chapter Contents*
-* [3.1-the-if-statement] (https://github.com/tonningp/cpp-tutorials/tree/master/chapter3-control-flow/3.1-the-if-statement)
+* [3.1-the-if-statement](https://github.com/tonningp/cpp-tutorials/tree/master/chapter3-control-flow/3.1-the-if-statement)
 
 * 3.2-relational-operators:
 
