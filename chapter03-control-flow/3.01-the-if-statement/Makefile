@@ -1,9 +1,9 @@
-example1: example1.cpp
-	g++ -o example1 example1.cpp
-	./example1
+main: main.cpp
+	g++ -o main main.cpp
+	./main
 
-edit-example1:
-	vi example1.cpp
+edit:
+	vi main.cpp
 
 clean:
-	@rm example1 2>/dev/null
+	@rm main 2>/dev/null
