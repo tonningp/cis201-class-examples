@@ -11,7 +11,7 @@ Based on chapters for [Big C++ 2nd edition](https://www.wiley.com/en-us/Big+C%2B
 - [chapter07-pointers](./chapter07-pointers)
 - [chapter05-classes](./chapter05-classes)
 
-# Sample Code
+
 
 # Class resources
 - [Course website](https://boss.vvc.edu/cisclass/course/view.php?id=70)
