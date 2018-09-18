@@ -45,3 +45,4 @@ machine code for input/output and other services to build your program.
 20. An algorithm is a description of steps to solve a problem that is unambiguous, executable, and terminating.
 
 # Instructor Notes
+- This is a note
