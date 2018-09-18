@@ -12,6 +12,7 @@ Based on chapters for [Big C++ 2nd edition](https://www.wiley.com/en-us/Big+C%2B
 - [chapter05-classes](./chapter05-classes)
 
 # Sample Code
+
 # Class resources
 - [Course website](https://boss.vvc.edu/cisclass/course/view.php?id=70)
 - [Discord channel](https://discordapp.com/channels/293440921712721920/352098493361291266)
