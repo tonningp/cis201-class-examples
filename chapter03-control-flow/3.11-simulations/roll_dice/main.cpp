@@ -43,7 +43,7 @@ int main()
         }
         else
         {
-            cout << "We have problem with the random number" << endl;
+            cout << "We have a problem with the random number." << endl;
         }
 
     }
