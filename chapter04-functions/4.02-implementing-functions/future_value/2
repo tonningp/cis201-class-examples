@@ -1,0 +1,14 @@
+#include<iostream>
+
+using namespace std;
+
+double future_value(double p)
+{
+
+}
+
+int main()
+{
+
+   return 0;
+}
