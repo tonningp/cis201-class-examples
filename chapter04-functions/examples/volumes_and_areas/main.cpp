@@ -14,6 +14,8 @@ int main()
    double radius = get_double("Please enter the radius: ");
    cout << radius << endl;
    cout << sphere_volume(radius) << endl;
+   double height = get_double("Enter the height: ");
+   cout << height << endl;
    return 0;
 }
 
