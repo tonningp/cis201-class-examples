@@ -13,7 +13,7 @@ int main()
 {
     //for(int i = 100;i<120;i+=1)
     //   cout << i << " = " << int_name(i) << endl;
-    cout <<  int_name(10279) << endl;
+    cout <<  int_name(151279) << endl;
     return 0;
 }
 
@@ -77,6 +77,7 @@ string int_name(int n)
     string r; // the return value
 
     if (c >= 1000) {
+    /*
         int thousands = c / 1000;
         string thou_str  = "";
         if(thousands >= 100)
@@ -88,10 +89,13 @@ string int_name(int n)
         else if(thousands > 0)
            thou_str = digit(thousands);
         r = thou_str + " Thousand "; 
+   */
+
+        r = int_name(c/1000) + " Thousand ";;
         c = c % 1000;
     }
     if (c >= 100) {
-        r = r + digit(c/100) + " Hundred"; 
+        r = r + digit(c/100) + " Hundred "; 
         c = c % 100;
     }
     if (c >= 20) {
