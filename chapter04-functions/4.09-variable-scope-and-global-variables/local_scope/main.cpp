@@ -3,24 +3,32 @@
 
 using namespace std;
 
-double future_value(double initial,double p,int term);
+
+void scope_test(int x);
 
 
-int main()
+int main() 
 {
 
-   double initial = 1000.00,p=5.0;
-   int term = 10;
-   cout << start_balance << endl;
-   double balance = future_value(initial,p,term);
+   int x = 20;
+   int y = 30;
 
-   cout << balance << endl;
+   scope_test(x);
+   scope_test(x);
+   scope_test(x);
+   scope_test(x);
+   scope_test(x);
 
    return 0;
 }
 
-double future_value(double initial,double p,int term)
+void scope_test(int x)
 {
-    return initial * pow(1 + p / 100.0,term);
+    x = 10;
+    static int y = 0;
+    cout << x << endl;
+    cout << y << endl;
+    y++;
 }
+
 

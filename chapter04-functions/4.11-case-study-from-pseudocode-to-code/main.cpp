@@ -3,15 +3,17 @@
 
 using namespace std;
 
+string int_name(int n);
+
 string digit(int n);
 string teens(int n);
 string tens(int n);
-string int_name(int n);
 
 int main()
 {
-    for(int i = 80;i<100;i+=1)
-       cout << i << " = " << int_name(i) << endl;
+    //for(int i = 100;i<120;i+=1)
+    //   cout << i << " = " << int_name(i) << endl;
+    cout <<  int_name(10279) << endl;
     return 0;
 }
 
@@ -55,61 +57,42 @@ string digit(int n)
 {
     string value = "";
 
-    if(n == 0)
-    {
-        value = "Zero";
-    }
-    else if(n == 1)
-    {
-        value = "One";
-    }
-    else if(n == 2)
-    {
-        value = "Two";
-    }
-    else if(n == 3)
-    {
-        value = "Three";
-    }
-    else if(n == 4)
-    {
-        value = "Four";
-    }
-    else if(n == 5)
-    {
-        value = "Five";
-    }
-    else if(n == 6)
-    {
-        value = "Six";
-    }
-    else if(n == 7)
-    {
-        value = "Seven";
-    }
-    else if(n == 8)
-    {
-        value = "Eight";
-    }
-    else if(n == 9)
-    {
-        value = "Nine";
-    }
-    return value;
+    if(n == 1) value = "One";
+    else if(n == 2) value = "Two";
+    else if(n == 3) value = "Three";
+    else if(n == 4) value = "Four";
+    else if(n == 5) value = "Five";
+    else if(n == 6) value = "Six";
+    else if(n == 7) value = "Seven";
+    else if(n == 8) value = "Eight";
+    else if(n == 9) value = "Nine";
+    else value = "";
 
+    return value; 
 }
+
 string int_name(int n) 
 {
     int c = n; // The part that still needs to be converted string r;
     string r; // the return value
 
     if (c >= 1000) {
-    //    r = name of thousands in c + "thousand"; 
-    //    remove thousands from c;
+        int thousands = c / 1000;
+        string thou_str  = "";
+        if(thousands >= 100)
+           thou_str = digit(thousands);
+        else if(thousands >= 20)
+           thou_str = tens(thousands);
+        else if(thousands >= 10)
+           thou_str = teens(thousands);
+        else if(thousands > 0)
+           thou_str = digit(thousands);
+        r = thou_str + " Thousand "; 
+        c = c % 1000;
     }
     if (c >= 100) {
-    //    r = r + name of hundreds in c + "hundred"; 
-    //    remove hundreds from c;
+        r = r + digit(c/100) + " Hundred"; 
+        c = c % 100;
     }
     if (c >= 20) {
         r = r + " " + tens(c); 
