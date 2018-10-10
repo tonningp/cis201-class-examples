@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<cassert>
 
 using namespace std;
 
@@ -9,20 +10,33 @@ string digit(int n);
 string teens(int n);
 string tens(int n);
 
+// Unit test
 int main()
 {
 
     // Unit tests
+    // Blackbox
+    
+    // Whitebox
+    assert(digit(1) == "One");
+    assert(digit(2) == "Two");
+    assert(digit(3) == "Three");
+    assert(digit(4) == "Four");
+    assert(digit(9) == "Nine");
+
+    cout << int_name(167) << endl;
+    assert(int_name(416) == "Four Hundred Sixteen");
+
+    cout << "Tests passed!" << endl;
     return 0;
 }
 
-#define TURNOFF 1
+#define NO_DEBUG 1
 
 string tens(int n)
 {
 
-#if TURNOFF
-
+#if NO_DEBUG
     string value = "";
     if(n >= 90) value = "Ninety";
     else if(n >= 80) value = "Eighty";
@@ -62,7 +76,8 @@ string teens(int n)
 
 string digit(int n)
 {
-    string value = "";
+    string value = "TODO";
+
 
     if(n == 1) value = "One";
     else if(n == 2) value = "Two";
@@ -74,7 +89,8 @@ string digit(int n)
     else if(n == 8) value = "Eight";
     else if(n == 9) value = "Nine";
     else value = "";
-
+#if 0
+#endif
     return value; 
 }
 
@@ -84,7 +100,7 @@ string int_name(int n)
     string r; // the return value
 
     if (c >= 1000) {
-        r = int_name(c/1000) + " Thousand";
+        r = int_name(c/1000) + " Thousand ";
         c = c % 1000;
     }
     if (c >= 100) {

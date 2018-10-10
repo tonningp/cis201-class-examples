@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<cassert>
 
 using namespace std;
 
@@ -19,6 +20,9 @@ int main()
 
 double future_value(double initial,double p,int term)
 {
+    assert(initial > 0);
+    assert(p > 0);
+    assert(term > 0);
     return initial * pow(1 + p / 100.0,term);
 }
 
