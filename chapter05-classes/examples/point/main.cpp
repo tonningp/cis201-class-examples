@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 #include<cmath>
 
 using namespace std;
@@ -14,6 +15,7 @@ public:
     void set_y(double _y); // mutating function
     double get_x(); // accessor function
     double get_y(); // accessor function
+    string to_string();
 private:
     double x,y;
 };
@@ -55,10 +57,21 @@ double Point::distance(Point p)
     return sqrt( pow( x - p.x,2 ) + pow( y - p.y,2 ));
 }
 
+string Point::to_string()
+{
+    string s = "(";
+    s += std::to_string(x);
+    s += ",";
+    s += std::to_string(y);
+    s += ")";
+    return s;
+}
+
 int main()
 {
     Point p1(2,1),p2(1,2);
 
+    cout << "p1 = " << p1.to_string() << endl;
     cout << "The distance is " << p1.distance(p2) << endl;
 
 /*
