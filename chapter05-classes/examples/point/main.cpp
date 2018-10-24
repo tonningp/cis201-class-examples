@@ -15,7 +15,7 @@ public:
     void set_y(double _y); // mutating function
     double get_x(); // accessor function
     double get_y(); // accessor function
-    string to_string();
+    string to_string(); // string representation
 private:
     double x,y;
 };
@@ -71,14 +71,7 @@ int main()
 {
     Point p1(2,1),p2(1,2);
 
-    cout << "p1 = " << p1.to_string() << endl;
     cout << "The distance is " << p1.distance(p2) << endl;
 
-/*
-    Line l;
-    l.set_p1(p1);
-    l.set_p2(p2);
-    cout << "The length is " << l.length() << endl;
-    */
     return 0;
 }
