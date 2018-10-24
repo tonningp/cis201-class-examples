@@ -86,11 +86,10 @@ int main()
     cout << "p1 = " << p1.to_string() << endl;
     cout << "The distance is " << p1.distance(p2) << endl;
 
-/*
-    Line l;
-    l.set_p1(p1);
-    l.set_p2(p2);
+
+    Line ln(p1,p2);
+    
     cout << "The length is " << l.length() << endl;
-    */
+  
     return 0;
 }
