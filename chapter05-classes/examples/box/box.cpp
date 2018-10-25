@@ -8,7 +8,7 @@ using namespace std;
 
 
 // constructor with parameters
-Box::Box(int width,int height);
+Box::Box(int width,int height)
 {
     set_width(width);
     set_height(height);
@@ -56,7 +56,7 @@ Box(6,6).display();
 void Box::display()
 {
 //    cout << "Box(" << m_width << ","<< m_height << ")" << endl;
-    draw_line(m_end,m_mid);
+    draw_line("+","--");
     for(int i=0;i<m_height-1;i++) 
         draw_line("|","  ");
     draw_line("+","--");
