@@ -71,13 +71,23 @@ string Point::to_string()
 class Line
 {
 public:
-    Line();
     Line(Point _p1,Point _p2);
     double length();
 
 private:
     Point p1,p2;
 };
+
+Line::Line(Point _p1,Point _p2)
+{
+    p1 = _p1;
+    p2 = _p2;
+}
+
+double Line::length()
+{
+    return p1.distance(p2);
+}
 
 int main()
 {
@@ -89,7 +99,7 @@ int main()
 
     Line ln(p1,p2);
     
-    cout << "The length is " << l.length() << endl;
+    cout << "The length is " << ln.length() << endl;
   
     return 0;
 }
