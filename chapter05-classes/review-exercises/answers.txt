@@ -1,0 +1,214 @@
+R5.1
+Class            Category
+String            Real-world entity
+Time            System service
+Employee        Real-world entity
+Point            Mathematical abstraction
+Circle            Mathematical abstraction
+Line            Mathematical abstraction
+Message        System service
+GraphicWindow    System service
+Product        Real-world entity
+---
+R5.2
+The class interface is made of the declarations of the functions (constructors, mutator member functions, and accessor member functions) that can be applied to an object of class type. To use an object, we only need to use its interface.
+A class implementation is made of the data fields that store the state of an object and the definition of every function that is advertised in the class interface. 
+---
+R5.3
+A nonmember function is not a member of any class and cannot access the private data fields of objects of any class. Specifically, a non-member function is called without an implicit parameter. 
+In contrast, a member function must be applied to an object of class type. Member functions of a class are allowed to access the private data fields of objects of that class.
+---
+R5.4
+A mutator function is a member function that can change a data value in an existing object. 
+An accessor function simply retrieves data from an object without changing the data.
+---
+R5.5
+An accessor function that is missing a const keyword in its definition will still work as expected. However, there will be compiler errors if another member function that has been properly declared as const makes use of this function.
+If you accidentally supply the const keyword in a mutator function, then a compiler error will occur when the mutator function attempts to modify the object's data.
+---
+R5.6
+An implicit parameter is the object on which a member function is invoked using the dot notation. It is not passed in the parameter list. The implicit parameter is always passed by reference. 
+In contrast, explicit parameters of a member function are listed in the function definition. By default, an explicit parameter is passed by value. (To pass an explicit parameter by reference, you must supply an ampersand &.)
+---
+R5.7
+A member function must have one and only one implicit parameter.
+A nonmember function cannot have any implicit parameters.
+A function can have zero or more number of explicit parameters.
+---
+R5.8
+A constructor is a function that has the same name as its class and is used to initialize the data fields of a new object of that class when the new object is created. A constructor does not return a value.
+---
+R5.9
+A default constructor is a constructor that requires no parameters. 
+If a class lacks a default constructor, then you must always supply parameters when constructing objects of that class. 
+---
+R5.10
+A class can have any number of constructors.
+A class need not have any constructors. If a class has no constructors, then a default constructor with no parameters is provided by the compiler. That default constructor doesn't initialize any data fields that are numbers, but it calls the default constructor on all data fields that are objects. 
+If a class has more than one constructor, the constructor having the same parameter types as the call arguments is used.
+---
+R5.11
+You cannot create an object variable without invoking one of the constructors. This is an important guarantee of the C++ language.
+---
+R5.12
+Member functions are normally declared within the public section of a class definition. This is the class interface. Member functions are defined in the implementation of the class. The definition of a member function is similar to the definition of a nonmember function except that the function name in the definition is prefixed with class_name:: as in void Product::read(). 
+---
+R5.13
+The hiding of implementation details is called encapsulation. Encapsulation prevents direct access to an object's data. For example, if all data fields are declared private, one cannot assign a new value to an object variable as in e.salary = 25,000;. All access to private object data happens via the public interface, that is through mutator and accessor functions, like e.set_salary(25,000);.
+The use of encapsulation prevents accidental or undesired use of an object's data. For example, there may be dependencies within an object's data elements and a change of one data element value must force a change in another. For example, the Time class member function add_seconds(n) is safer to use than setting seconds to a value that might be outside the legal range 0...59.
+---
+R5.14
+Programmers can read the names of private data fields in other classes, but if they write code that attempts to directly access private data fields, a compile-time error will occur.
+---
+R5.15
+No, not every data field needs an accessor. For example, the istream class has a number of data fields that make input possible. You don't need to know about these variables in order to read input. Therefore, you don't need an accessor for these variables.
+Even if a class has an accessor, it doesn't need a mutator. For example, if an Employee object has a private social security number and that number is never supposed to change, there is no point in providing a setSSN accessor. If the programmer sets the value of the social security number once in the constructor and doesn’t provide a mutator, the value of this variable won’t be changed.
+---
+R5.16
+class Product
+{
+   public:
+      /**
+         Constructs a product with score 0 and price 1.
+      */
+      Product();
+
+      /**
+         Reads in this product object.
+      */
+      void read();
+
+      /**
+         Prints this product object.
+      */
+      void print() const;
+
+      /**
+         Retrieves value of price for this product object.
+         @return price        
+      */
+      double get_price() const;        /* New member function */
+
+      /**
+         Retrieves value of score for this product object.
+         @return score
+      */
+      int get_score() const;          /* New member function */
+
+   private:
+      string name;
+      double price;
+      int score;
+};
+
+
+double Product::get_price() const
+{  
+   return price;
+}
+
+int Product::get_score() const
+{  
+   return score;
+}
+
+
+/**
+   New definition of is_better_than function:
+   Compares two product objects.
+   @param a  the first product object
+   @param b  the second product object
+   @return true if a is better than b, false otherwise
+*/
+bool is_better_than(Product a, Product b)
+{  
+   if (a.get_price() == 0) return true;
+   if (b.get_price() == 0) return false;
+   return (a.get_score() / a.get_price())
+      > (b.get_score() / b.get_price());
+}
+
+int main()
+{  ...
+   if (is_better_than(next, best)) best = next; 
+      // Change call to have two explicit parameters
+   ...
+}
+---
+R5.17
+class Product
+{
+   public:
+      /**
+         Constructs a product with score 0 and price 1.
+      */
+      Product();
+
+      /** 
+         Constructs a product with parameters.
+         @param n  product name
+         @param p  parameter price
+         @param s  parameter score    
+      */
+      Product(string n, double p, int s); // New constructor
+
+      /**
+         Compares this product object to another product object.
+         @return true if this product object is better, false otherwise
+      */
+      bool is_better_than(Product b) const;     
+
+      /**
+         Prints this product object.
+      */
+      void print() const;
+
+   private:
+      string name;
+      double price;
+      int score;
+};
+
+Product::Product(string n, double p, int s )
+{  
+   name = n;
+   price = p;
+   score = s;
+}
+
+/**
+   Creates project object based on user input.
+   @return a product object with user-specified name, price, and score
+*/
+Product read() // New non-member function
+{  
+   cout << "Please enter the model name: ";
+   name = get_line(cin);
+
+   cout << "Please enter the price: ";
+   price = doublevalue(get_line(cin));
+
+   cout << "Please enter the score: ";
+   score = intvalue(get_line(cin));
+
+   return Product(name, price, score);
+}
+
+
+int main()
+{  
+   ...
+   Product next;
+   next = read(); // Call non-member function
+   ...
+}
+
+---
+R5.18
+In a nonmember function, calls to member functions use the dot notation; calls to nonmember functions do not use the dot notation.
+In a member function, a call to another member function with the same implicit parameter does not need the dot notation. Therefore, if you see a call with the dot notation, you know that it is a member function call. But if you see a call without the dot notation, you first have to check whether the function that is called is a member function of the same class. If so, the call is a member function call.
+---
+R5.19
+All implicit parameters are passed by reference. If they are conceptually passed by value, then the const keyword needs to be used in the member function definition. 
+By default explicit parameters are passed by value. The & symbol needs to be supplied to the explicit parameters if they are to be passed by reference.  
+---

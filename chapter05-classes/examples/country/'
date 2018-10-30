@@ -1,0 +1,15 @@
+#include<iostream>
+#include "country.h"
+
+
+Country::Country(std::string name,int population,int m_area)
+{
+    m_name = name;
+    m_population = population;
+    m_area = area;
+}
+
+void Country::print()
+{
+    cout
+}
