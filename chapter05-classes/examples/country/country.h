@@ -8,6 +8,7 @@ class Country
     int m_population,m_area;
 
 public:
+   Country();
    Country(std::string name,int population,int area);
    std::string get_name();
    bool is_greater_population(const Country &c) const;

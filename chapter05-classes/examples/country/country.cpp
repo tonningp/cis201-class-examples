@@ -1,6 +1,12 @@
 #include<iostream>
 #include "country.h"
 
+Country::Country()
+{
+    m_name = "No Name";
+    m_population = 0;
+    m_area = 0;
+}
 
 Country::Country(std::string name,int population,int area)
 {

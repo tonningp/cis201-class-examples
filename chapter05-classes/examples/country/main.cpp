@@ -8,13 +8,13 @@ Country read();
 int main()
 {
    Country next = read();
+   Country greater_population;
    if(next.is_greater_population(Country("Some Country",10000,100)))
-        std::cout << next.get_name() << " has a larger pop than Some Country" << std::endl;
-   else
-        std::cout << "Some Country has a larger pop than " << next.get_name() << std::endl;
+        greater_population = next;
 
    return 0;
 }
+
 
 Country read()
 {
