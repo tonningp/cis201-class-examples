@@ -3,11 +3,11 @@
 
 #include "country.h"
 
-Country read();
+Country read_country();
 
 int main()
 {
-   Country next = read();
+   Country next = read_country();
    Country greater_population;
    if(next.is_greater_population(Country("Some Country",10000,100)))
         greater_population = next;
@@ -16,7 +16,7 @@ int main()
 }
 
 
-Country read()
+Country read_country()
 {
     std::string name;
     int population,area;
