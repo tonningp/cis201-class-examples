@@ -1,3 +1,3 @@
 # cis201-book-sourcecode
 
-In this repository are the example files from the text
+This directory contains all of the source code from the text book examples.
