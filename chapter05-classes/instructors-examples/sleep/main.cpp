@@ -27,7 +27,7 @@ int main()
     for(int i=0;i < 100; i++)
     {
         Box(width,height).display();
-        sleep(250);
+        sleep(100);
         clear();
         if(width > 24)
           width = 3;
