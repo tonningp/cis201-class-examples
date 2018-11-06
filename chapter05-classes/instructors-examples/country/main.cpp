@@ -7,10 +7,28 @@ Country read_country();
 
 int main()
 {
-   Country next = read_country();
    Country greater_population;
-   if(next.is_greater_population(Country("Some Country",10000,100)))
-        greater_population = next;
+   Country greater_area;
+   Country greater_popdensity;
+   bool done = false;
+   do
+   {
+       Country next = read_country();
+
+       if(next.is_greater_population(greater_population))
+            greater_population = next;
+       if(next.is_greater_area(Country(greater_area))
+            greater_area = next;
+       if(next.is_greater_popdensity(Country(greater_popdensity))
+            greater_popdensity = next;
+       
+       char resp;
+       std::cout << "Continue? ";
+       cin >> resp;
+       if(resp == 'n')
+         done = true;
+
+   }while(!done);
 
    return 0;
 }

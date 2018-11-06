@@ -22,8 +22,8 @@ class Message
 public:
     Message();
     Message(const std::string recipient,const std::string sender,const Time &timestamp);
-    void append(const std::string line);
-    std::string to_string();
+    void append(const std::string &line);
+    std::string to_string() const;
     void print() const;
 };
 
