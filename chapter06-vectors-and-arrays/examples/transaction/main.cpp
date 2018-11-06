@@ -1,3 +1,5 @@
+#include <vector>
+
 // it is assumed that you will create the transaction.h and transaction.cpp files
 #include "transaction.h"
 
