@@ -4,16 +4,18 @@
 
 void print(const std::vector<int> &v)
 {
-    for(int i=0;i <= v.size();i++)
+    for(int i=0;i < v.size();i++)
         std::cout << v[i] << std::endl;
-
 }
 
-void fill(std::vector<int> &v,int number)
+void fill(std::vector<int> &v)
 {
-
+    v.push_back(30000);
+    v.push_back(31000);
+    v.push_back(32000);
+    v.push_back(33000);
+    v.push_back(34000);
 }
-
 int max(const std::vector<int> &v)
 {
    int max_value = -1;
@@ -26,11 +28,9 @@ int max(const std::vector<int> &v)
 int main()
 {
     std::vector<int> salary;
+    fill(salary);
+    print(salary);
     
-    salary.push_back(1000);
-
-    std::cout << salary[0] << std::endl;
-
     return 0;
 }
 
