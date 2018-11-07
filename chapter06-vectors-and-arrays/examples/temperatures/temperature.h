@@ -9,6 +9,7 @@ class Temperature
     int m_temp;
     Date m_date;
     std::string m_location;
+
 public:
     Temperature();
     Temperature(std::string location,int temp,Date date);
