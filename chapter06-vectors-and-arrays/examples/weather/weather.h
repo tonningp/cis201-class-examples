@@ -17,6 +17,7 @@ public:
     Weather();
     Weather(std::string location,int high,int low,double precip,Date date,Time time);
     std::string to_string();
+    void read();  
 
 };
 

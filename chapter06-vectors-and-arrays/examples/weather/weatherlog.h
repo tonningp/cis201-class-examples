@@ -10,6 +10,7 @@ class Weatherlog
 
 public:
    void add(const Weather &w);
+   void read();
    void print();
 };
 
