@@ -1,10 +1,6 @@
 #include<iostream>
 
 
-int* address_of(int &v)
-{
-   return &v;
-}
 
 class Point 
 { 
@@ -38,36 +34,26 @@ void Point::print()
 void do_something_with_points()
 {
     Point p1(1,1);
-    p1.point();
     Point *p2 = new Point(2,2);
     p2->print();
     (*p2).print();
     delete p2;
 }
 
+void dangerous_function()
+{
+    int *intPtr;
+//    std::cout << intPtr << std::endl;
+    intPtr = new int;
+//    delete intPtr;
+}
+
 int main()
 {
 
-;    int x,y,z;
-    int *intPtr;
-    int *anotherPtr;
+    Point *p1 = new Point(1,1);
 
-    Point p1(1,1);
-    p1.print();
+    p1->print();
 
-    intPtr = new int;
-    *intPtr = 100;
-    anotherPtr = intPtr;
-
-    std::cout << address_of(x) << std::endl;
-    std::cout << &x << std::endl;
-    std::cout << x << std::endl;
-
-    std::cout<< intPtr << std::endl;
-    std::cout << *anotherPtr << std::endl;
-    *intPtr = 200;
-    std::cout << *anotherPtr << std::endl;
-
-    return 0;
-}
-
+    return 0; 
+} 
