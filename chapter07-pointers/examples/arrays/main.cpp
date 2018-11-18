@@ -6,6 +6,12 @@ void print_array(double *ar,int size)
         std::cout << ar[i] << std::endl;
 }
 
+void array_function()
+{
+    double *ar = new double[10];
+    delete [] ar;
+}
+
 const int SIZE = 5;
 int main()
 {

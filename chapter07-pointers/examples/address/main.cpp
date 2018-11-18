@@ -40,20 +40,20 @@ void do_something_with_points()
     delete p2;
 }
 
-void dangerous_function()
+void not_dangerous_function()
 {
-    int *intPtr;
-//    std::cout << intPtr << std::endl;
-    intPtr = new int;
-//    delete intPtr;
+    int *a = new int[10];
+
+    delete [] a;
 }
 
 int main()
 {
 
-    Point *p1 = new Point(1,1);
-
-    p1->print();
+    while(true)
+    {
+        not_dangerous_function();
+    }
 
     return 0; 
 } 
