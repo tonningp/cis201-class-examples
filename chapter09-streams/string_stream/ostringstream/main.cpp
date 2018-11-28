@@ -19,15 +19,30 @@ std::ostream& build_stream(std::ostream &o)
 int main()
 {
     std::ostringstream ostring;
+
     build_stream(ostring);
     std::cout << ostring.str() << std::endl;
 
     build_stream(std::cout);
 
     std::ofstream f("data.txt");
-    //build_stream(f);
-    f << ostring.str() << std::endl;
+    build_stream(f);
     f.close();
+
+/*
+    ostring << 1
+            << " "
+            << 23.5
+            << " "
+            << 2
+            << " "
+            << "Hello"
+            << std::endl;
+
+    std::cout << ostring.str() << std::endl;
+
+*/
+    
     
 
     return 0;

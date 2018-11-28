@@ -19,5 +19,12 @@ int main()
     std::cout << value << std::endl;
     istring >> value;
     std::cout << value << std::endl;
+    int i;
+    istring >> i;
+    std::cout << i << std::endl;
+    istring >> i;
+    std::cout << i << std::endl;
+    istring >> i;
+    std::cout << i << std::endl;
     return 0; 
 }
